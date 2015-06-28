@@ -1,0 +1,109 @@
+<html>
+<head>
+	<title>Facebook share</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/material.min.css">
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+</head>
+<body>
+	<div class="container">		
+		<div class="row">
+			<div class="col-lg-12 clearfix">
+				<div class="navbar navbar-default">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="javascript:void(0)">Facebook</a>
+					</div>
+					<div class="navbar-collapse collapse navbar-responsive-collapse">
+						<ul class="nav navbar-nav">
+							<li class="active"><a class="padder" href="javascript:void(0)">home</a></li>
+							<li><a class="padder" href="javascript:void(0)">about us</a></li>
+						</ul>
+						<form class="navbar-form navbar-left col-lg-8 padder">
+							<input type="text" class="form-control col-lg-8" placeholder="Search">
+						</form>
+						<div class="nav navbar-nav navbar-right" >
+							<button class="btn btn-info btn-flat" id="profilePicture"
+							data-target="#" class="dropdown-toggle" data-toggle="dropdown">
+							<div id="iconPic" class="icon">
+								<i class="mdi-action-account-circle padder">
+								</i>
+							</div>
+							<div id="picture"/>
+						</button>
+
+						<ul class="dropdown-menu">
+							<li><a id="logoutButton">logout</a></li>
+						</ul>
+					</div>
+				</div>					
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-12">
+			<form class="form-horizontal">
+				<fieldset>
+					<div class="form-group clearfix">            		
+						<div class="col-lg-10 navbar-left">
+							<input type="text" class="form-control navbar-left" id="inputStatus" placeholder="status">
+						</div>
+						<button class="btn btn-fab btn-fab-mini btn-raised btn-sm btn-success navbar-left" onclick="postStatus()"><i class="mdi-navigation-check"></i></button>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	<div class="statusButtonHolder">
+		<div id="statusButton">
+			<button class="btn btn-fab btn-raised btn-primary shadowButton" onclick="getUserStatus()">
+				<i class="mdi-social-person"></i>
+			</button>
+			Click to get all the status and anayze them
+		</div>			
+		<div class="notconnected" id="notConnectedButton">
+			<button class="btn btn-fab btn-raised btn-warning shadowButton" 
+			onclick="showUserPopup()">
+			<i class="mdi-alert-warning"></i>
+		</button>
+		You are not connected to the app to user further
+	</div>
+</div>
+
+<div class="list-group" id="listGroup" >
+</div>
+<div id="loginPopup" class="modal fade" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+				<h4 class="modal-title">Login</h4>
+			</div>
+			<div class="modal-body">
+				<p>Please login into facebook and give access to our app
+					so that we can assess your attitude from your facebook.
+					<br />
+					There will be absolute terms where we do not disclose your personal
+					information at any costs.
+				</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-default" data-dismiss="modal">Dismiss</button>
+				<button class="btn btn-primary" onclick="makeUserLogin()">Login</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="fb-root">
+</div>
+</div>
+
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/material.js"></script>
+<script type="text/javascript">
+$.material.init();
+</script>
+<script type="text/javascript" src="js/facebook.js"></script>
+
+</body>
+</html>

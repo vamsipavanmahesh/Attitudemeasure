@@ -1,0 +1,10 @@
+.padder{
+	padding-top: 8px;
+	padding-bottom: 8px; 
+}
+#picture{
+	border-radius: 50%;
+}
+.nav li a{
+	  text-transform: capitalize;
+}
